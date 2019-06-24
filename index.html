@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>跨域测试</title>
+</head>
+<body>
+<script>
+    var xhr = new XMLHttpRequest()
+    xhr.open("GET","http:127.0.0.1:8080")
+    xhr.send()    
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState==4 &&xhr.status==200) {
+            //步骤五 如果能够进到这个判断 说明 数据 完美的回来了,并且请求的页面是存在的
+        　　　　console.log(xhr.responseText);//输入相应的内容
+        　　}
+    }
+    
+</script>
+</body>
+</html>
